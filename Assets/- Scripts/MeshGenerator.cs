@@ -14,7 +14,6 @@ public class MeshGenerator : MonoBehaviour
   private Vector3[] normals;
   private Vector2[] uvs;
 
-  // Start is called before the first frame update
   void Start()
   {
     MeshFilter meshFilter = gameObject.GetComponent<MeshFilter>();// gets <MeshFilter> from gameObject
@@ -31,8 +30,12 @@ public class MeshGenerator : MonoBehaviour
     mesh.uv         = uvs;
 
     meshFilter.mesh = mesh;
+    mesh.RecalculateBounds();
+    //mesh.Clear(); // Remove all mesh data from mesh
     
   }
+
+
 
   void CreateVertices( ref Vector3[] _vertices) {
     _vertices = new Vector3[4]
@@ -44,7 +47,7 @@ public class MeshGenerator : MonoBehaviour
     };
   }
 
-  void CreateTriangles(ref int[] _triangles) {
+  void CreateTriangles( ref int[] _triangles) {
     _triangles = new int[6]
     {
       // lower left triangle
@@ -54,17 +57,17 @@ public class MeshGenerator : MonoBehaviour
     };
   }
 
-  void CreateNormals(ref Vector3[] _normals) {
+  void CreateNormals( ref Vector3[] _normals) {
     _normals = new Vector3[4]
     {
-      Vector3.up,
-      Vector3.up,
-      Vector3.up,
-      Vector3.up
+      -Vector3.forward,
+      -Vector3.forward,
+      -Vector3.forward,
+      -Vector3.forward
     };
   }
 
-  void CreateUVs(ref Vector2[] _uvs) {
+  void CreateUVs( ref Vector2[] _uvs) {
     _uvs = new Vector2[4]
     {
       new Vector2(0, 0),
