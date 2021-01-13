@@ -39,6 +39,7 @@ public class MeshBuilder
     if (m_UVs.Count == m_Vertices.Count)
       mesh.uv = m_UVs.ToArray();
 
+    mesh.RecalculateNormals();
     mesh.RecalculateBounds();
 
     return mesh;
