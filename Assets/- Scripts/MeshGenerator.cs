@@ -1,3 +1,8 @@
+/*
+ * Copyright (C) Grigorij Glukhov. 2020. All rigths reserved
+ * This script create polygon from 2 faces
+ */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -35,8 +40,7 @@ public class MeshGenerator : MonoBehaviour
     
   }
 
-
-
+  // Create 4 vertices
   void CreateVertices( ref Vector3[] _vertices) {
     _vertices = new Vector3[4]
     {
@@ -47,6 +51,7 @@ public class MeshGenerator : MonoBehaviour
     };
   }
 
+  // Assign order of triangles to vertices
   void CreateTriangles( ref int[] _triangles) {
     _triangles = new int[6]
     {
@@ -57,6 +62,7 @@ public class MeshGenerator : MonoBehaviour
     };
   }
 
+  // Create direction of normals
   void CreateNormals( ref Vector3[] _normals) {
     _normals = new Vector3[4]
     {
@@ -67,6 +73,7 @@ public class MeshGenerator : MonoBehaviour
     };
   }
 
+  // Create UVs set
   void CreateUVs( ref Vector2[] _uvs) {
     _uvs = new Vector2[4]
     {

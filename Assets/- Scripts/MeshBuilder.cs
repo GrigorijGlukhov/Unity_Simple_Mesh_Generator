@@ -1,3 +1,8 @@
+/*
+ * Copyright (C) Grigorij Glukhov. 2020. All rigths reserved
+ * Class containing mesh data: ver, tri, nor, uvs
+ */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
