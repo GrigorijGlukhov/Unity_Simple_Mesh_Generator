@@ -12,14 +12,26 @@ public class GameObjectToMesh : MonoBehaviour
   [Header("Size of each face")]
   public int m_Length = 1;
   public int m_Width  = 1;
+  public int m_Height = 1;
+  [Tooltip("Number of segments")]
+  public int segmentsCount = 10;
   MeshBuilder meshBuilder = new MeshBuilder();
     // Start is called before the first frame update
     void Start()
     {
-      // Mathod contain vertex, face, normal and uv reoutine
-      // working with meshBuilder
-      // _offset - positioning face
-      BuildQuad(meshBuilder, new Vector3(1, 1, 1));
+      // Number of X and Y segments will be produced
+      for (int i = 0; i < segmentsCount; i++) {
+        float z = m_Length * i;
+        for (int j = 0; j < segmentsCount; j++ ) {
+          float x = m_Width * j;
+          // Random range for height of mesh
+          Vector3 offset = new Vector3( x, Random.Range(0.0f, m_Height), z);
+          // Mathod contain vertex, face, normal and uv reoutine
+          // working with meshBuilder
+          // _offset - positioning face
+          BuildQuad(meshBuilder, offset);
+        }
+      }
 
       // Get meshFilter we working with. Create mesh in this object
       MeshFilter meshFilter = gameObject.GetComponent<MeshFilter>();
