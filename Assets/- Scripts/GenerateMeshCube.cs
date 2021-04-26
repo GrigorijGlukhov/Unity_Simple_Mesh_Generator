@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Grigorij Glukhov. 2020. All rigths reserved
+ * Copyright (C) Grigorij Glukhov. 2020. All rights reserved
  * Generate procedural cube mesh on current gameObject
  */
 

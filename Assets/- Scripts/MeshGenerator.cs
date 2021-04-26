@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Grigorij Glukhov. 2020. All rigths reserved
+ * Copyright (C) Grigorij Glukhov. 2020. All rights reserved
  * This script create polygon from 2 faces
  */
 

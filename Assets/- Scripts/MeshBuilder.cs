@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Grigorij Glukhov. 2020. All rigths reserved
+ * Copyright (C) Grigorij Glukhov. 2020. All rights reserved
  * Class containing mesh data: ver, tri, nor, uvs
  */
 

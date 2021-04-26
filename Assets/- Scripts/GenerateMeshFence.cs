@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Grigorij Glukhov. 2020. All rigths reserved
+ * Copyright (C) Grigorij Glukhov. 2020. All rights reserved
  * Generate procedural cube mesh on current gameObject
  */
 
@@ -89,8 +89,6 @@ public class GenerateMeshFence : MonoBehaviour
     BuildQuadV2(meshBuilder, farCorner, -upDir,      -rightDir);
     BuildQuadV2(meshBuilder, farCorner, -forwardDir, -upDir);
 
-    Mesh mesh = meshBuilder.CreateMesh();
-
     // Get meshFilter we working with. Create mesh in this object
     MeshFilter meshFilter = gameObject.GetComponent<MeshFilter>();
 
@@ -122,8 +120,6 @@ public class GenerateMeshFence : MonoBehaviour
     BuildQuadV2(meshBuilder, farCorner, -rightDir,   -forwardDir);
     BuildQuadV2(meshBuilder, farCorner, -upDir,      -rightDir);
     BuildQuadV2(meshBuilder, farCorner, -forwardDir, -upDir);
-
-    Mesh mesh = meshBuilder.CreateMesh();
 
     // Get meshFilter we working with. Create mesh in this object
     MeshFilter meshFilter = gameObject.GetComponent<MeshFilter>();
